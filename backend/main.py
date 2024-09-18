@@ -18,3 +18,7 @@ app.add_middleware(
 )
 
 app.include_router(QR_CODE.router, prefix="/QR", tags=["WIFI QR CODE"])
+
+@app.get("/")
+def homepage():
+    return "home page"
